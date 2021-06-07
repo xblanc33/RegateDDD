@@ -1,0 +1,32 @@
+{
+  "name": "regateddd",
+  "version": "1.0.0",
+  "description": "Projet illustrant une façon d'appliquer les patterns tactiques du DDD",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha -r ts-node/register ./test/domain/*Test.ts",
+    "compile": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xblanc33/RegateDDD.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xblanc33/RegateDDD/issues"
+  },
+  "homepage": "https://github.com/xblanc33/RegateDDD#readme",
+  "devDependencies": {
+    "@types/chai": "^4.2.18",
+    "@types/mocha": "^8.2.2",
+    "@types/node": "^15.6.2",
+    "chai": "^4.3.4",
+    "mocha": "^8.4.0",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2"
+  }
+}
