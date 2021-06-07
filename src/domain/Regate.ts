@@ -44,13 +44,13 @@ export default class Regate {
         }
     }
 
-    inscrireNouveauBateau() : string | "INSCRIPTIONS_CLOSES" {
+    inscrireNouveauBateau() : Bateau | "INSCRIPTIONS_CLOSES" {
         if (this._estOuverteAuxInscriptions) {
             const idDuBateau = this._id + this._bateaux.size;
-            const nouveauBateau = new Bateau(idDuBateau);
+            const nouveauBateau = new Bateau();
             nouveauBateau.definirPosition(this._depart);
             this._bateaux.set(idDuBateau, nouveauBateau);
-            return idDuBateau;
+            return nouveauBateau;
         } else {
             return "INSCRIPTIONS_CLOSES";
         }

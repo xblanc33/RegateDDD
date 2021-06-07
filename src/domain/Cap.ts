@@ -9,6 +9,10 @@ export default class Cap {
         return this._au;
     }
 
+    set au(nouvAu : "N" | "NE" | "E" | "SE" | "S" | "SO" | "O" | "NO") {
+        this._au = nouvAu;
+    }
+
     equals(cap : Cap) : boolean {
         return this._au === cap.au;
     }
