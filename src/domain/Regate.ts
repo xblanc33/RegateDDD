@@ -44,20 +44,19 @@ export default class Regate {
         }
     }
 
-    inscrireNouveauBateau() : string | "INSCRIPTIONS_CLOSES" {
+    inscrireNouveauBateau() : Bateau | "INSCRIPTIONS_CLOSES" {
         if (this._estOuverteAuxInscriptions) {
             const idDuBateau = this._id + this._bateaux.size;
-            const nouveauBateau = new Bateau(idDuBateau);
+            const nouveauBateau = new Bateau();
             nouveauBateau.definirPosition(this._depart);
             this._bateaux.set(idDuBateau, nouveauBateau);
-            return idDuBateau;
+            return nouveauBateau;
         } else {
             return "INSCRIPTIONS_CLOSES";
         }
     }
 
-    changerCapDuBateau(idDuBateau : string, nouveauCap : Cap) : "ID_INCONNU" | "CAP_CHANGE" {
-        const bateau = this._bateaux.get(idDuBateau);
+    changerCapDuBateau(bateau : Bateau, nouveauCap : Cap) : "ID_INCONNU" | "CAP_CHANGE" {
         if (bateau) {
             bateau.changerDeCap(nouveauCap);
             return "CAP_CHANGE";
