@@ -5,7 +5,7 @@ import Cap from "../../src/domain/Cap";
 import PointGPS from "../../src/domain/PointGPS";
 
 
-/*describe("Bateau creation", () => {
+describe("Bateau creation", () => {
     it("should create Bateau", () => {
         const bateau = new Bateau("bat1");
         expect(bateau.cap.au).eql("N");
@@ -34,4 +34,4 @@ import PointGPS from "../../src/domain/PointGPS";
         }
     })
     
-})*/
+})

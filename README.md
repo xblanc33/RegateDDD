@@ -16,6 +16,15 @@ Vous devez avoir JavaScript et NPM
     npm test
 
 
+## atelier
+
+L'atelier `atelier-Domain` propose une version avec quelques mauvaises pratiques dans le domain.
+
+    git checkout atelier-Domain
+
+
+
+
 
 
 
