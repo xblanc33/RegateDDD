@@ -44,13 +44,14 @@ export default class Regate {
         }
     }
 
-    inscrireNouveauBateau() : Bateau | "INSCRIPTIONS_CLOSES" {
+    // On ne doit pas retourner de référence vers un Entity. On doit retourner l'id
+    inscrireNouveauBateau() : string | "INSCRIPTIONS_CLOSES" {
         if (this._estOuverteAuxInscriptions) {
             const idDuBateau = this._id + this._bateaux.size;
-            const nouveauBateau = new Bateau();
+            const nouveauBateau = new Bateau(idDuBateau);
             nouveauBateau.definirPosition(this._depart);
             this._bateaux.set(idDuBateau, nouveauBateau);
-            return nouveauBateau;
+            return idDuBateau;
         } else {
             return "INSCRIPTIONS_CLOSES";
         }

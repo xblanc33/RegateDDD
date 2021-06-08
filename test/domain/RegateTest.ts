@@ -34,13 +34,11 @@ describe("Regate creation", () => {
         const SAINT_MALO = new PointGPS(48.65426980183052, -2.0274826120074674);
         const CHERBOURG = new PointGPS(49.661541913570666, -1.60155142579818);
         const regate = new Regate("maRegate", SAINT_MALO, CHERBOURG);
-        const boat = regate.inscrireNouveauBateau();
+        const boatId = regate.inscrireNouveauBateau();
         regate.cloreLesInscriptions();
 
-        if (boat !== "INSCRIPTIONS_CLOSES") {
-            boat.changerDeCap(new Cap("S"));
-            expect(boat.cap.au).equal("S");
-        }
+        const changementCap = regate.changerCapDuBateau(boatId, new Cap("S"));
+        expect(changementCap).equal("CAP_CHANGE");
     })
 
 })
