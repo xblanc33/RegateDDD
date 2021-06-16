@@ -29,11 +29,11 @@ En particulier, nous avons appliqués les patterns tactiques suivants :
 
 L'atelier que nous vous proposons vise à vérifier que les patterns VO, Entity et Aggregate ont été respectés.
 
-1. Vérifiez le pattern VO. 
+1. Vérifiez le pattern VO dans **PointGPS** et **Cap** 
     * Ajouter (positif ou négatif) les tags **[A Value Object is defined by its values ]**, **[A Value Object is immutable]**
-2. Vérifier le pattern Entity. 
+2. Vérifier le pattern Entity dans **Bateau**
     * Ajouter (positif ou négatif) les tags **[An Entity is defined by its id]**, **[An Entity has a state that is mutable]**, **[An Entity should provide business methods that respect encapsulation]**
-3. Vérifier le pattern Aggregate. 
+3. Vérifier le pattern Aggregate dans **Regate**
     * Ajouter (positif ou négatif) les tags **[An Aggregate is defined by its id]**, **[An Aggregate controls some Entities]**, **[An Aggregate should provide business methods that respect encapsulation]**
 
 Aller plus loin:
