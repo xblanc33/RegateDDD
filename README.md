@@ -39,7 +39,7 @@ L'atelier que nous vous proposons vise à vérifier que les patterns VO, Entity 
 Aller plus loin:
 1. Proposez une correction pour les tags négatifs que vous avez mis
 2. Ajoutez vos propres tags
-3. __Regardez le Repository et proposez une implémentation avec une base de données.__
+3. *Regardez le Repository et proposez une implémentation avec une base de données.*
 
 
 ## Pratiques DDD (tags proposés)
