@@ -16,16 +16,24 @@ Il est alors possible de changer le cap des bateaux.
 Ce code n'est pas très complexe mais il exploite les patterns tactiques du DDD (VO, Entity et Aggregate).
 
 
-## Objectif (Atelier Craft)
+## Choix de conception DDD 
 
-1. Dans le répertoire domain, identifiez pour chaque classe (sauf RegateRepository.ts) quel pattern a été suivi (VO, Entity ou Aggregate). 
-    * Ajoutez un tag VO, Entity ou Aggregate
+Le code que nous avons développé pour cette application suit les principes du DDD.
 
-2. Vérifiez le pattern VO. 
+En particulier, nous avons appliqués les patterns tactiques suivants :
+* Value Object (Objet immutable identifé par ses valeurs) pour les classes **Cap** et **PointGPS**
+* Entity (Objet mutable avec un identifiant) pour la classe **Bateau**
+* Aggregate (Objet composite) pour la classe **Regate**
+* Repository (Interface de sauvegarde des agrégats) pour la classe **RegateRepository**
+## Objectifs (Atelier Craft)
+
+L'atelier que nous vous proposons vise à vérifier que les patterns VO, Entity et Aggregate ont été respectés.
+
+1. Vérifiez le pattern VO. 
     * Ajouter (positif ou négatif) les tags [A Value Object is defined by its values ], [A Value Object is immutable]
-3. Vérifier le pattern Entity. 
+2. Vérifier le pattern Entity. 
     * Ajouter (positif ou négatif) les tags [An Entity is defined by its id], [An Entity has a state that is mutable], [An Entity should provide business methods that respect encapsulation]
-4. Vérifier le pattern Aggregate. 
+3. Vérifier le pattern Aggregate. 
     * Ajouter (positif ou négatif) les tags [An Aggregate is defined by its id], [An Aggregate controls some Entities], [An Aggregate should provide business methods that respect encapsulation]
 
 Aller plus loin:
