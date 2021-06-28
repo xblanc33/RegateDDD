@@ -66,4 +66,8 @@ export default class Regate {
         }
     }
 
+    equals(other : any) : boolean {
+        return other instanceof Regate && this._id === other.id;
+    }
+
 }
