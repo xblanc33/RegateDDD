@@ -15,7 +15,7 @@ export default class PointGPS {
         return this._longitude;
     }
 
-    equals(point : PointGPS) : boolean {
-        return this._latitude === point.latitude && this._longitude === point.longitude;
+    equals(other : any) : boolean {
+        return other instanceof PointGPS && this._latitude === other.latitude && this._longitude === other.longitude;
     }
 }

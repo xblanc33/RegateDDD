@@ -14,7 +14,7 @@ export default class Cap {
     //    this._au = nouvAu;
     //}
 
-    equals(cap : Cap) : boolean {
-        return this._au === cap.au;
+    equals(other : any) : boolean {
+        return other instanceof Cap && this._au === other.au;
     }
 }

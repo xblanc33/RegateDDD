@@ -34,7 +34,7 @@ export default class Bateau {
     }
 
     // définition de l'égalité par id
-    equals(bat : Bateau) : boolean {
-        return bat.id === this._id;
+    equals(other : any) : boolean {
+        return other instanceof Bateau && other.id === this._id;
     }
 }
