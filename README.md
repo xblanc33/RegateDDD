@@ -2,4 +2,4 @@
 
 Correction de l'atelier.
 
-Des commentaires précises les erreurs.
+Des commentaires précisent les erreurs.
